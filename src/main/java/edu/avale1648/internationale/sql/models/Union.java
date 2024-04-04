@@ -20,8 +20,8 @@ public class Union {
 	private User founder;
 	private boolean isMature;
 	private LocalDateTime cakeDate;
-	private File profilePicture;
-	private File banner;
+	private String pfpUrl;
+	private String bannerUrl;
 	@OneToMany(mappedBy = "union", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Post> posts;
 	@OneToMany(mappedBy = "union", cascade = CascadeType.ALL, orphanRemoval = true)
@@ -74,20 +74,20 @@ public class Union {
 		return cakeDate;
 	}
 
-	public File getProfilePicture() {
-		return profilePicture;
+	public String getPfpUrl() {
+		return pfpUrl;
 	}
 
-	public void setProfilePicture(File profilePicture) {
-		this.profilePicture = profilePicture;
+	public void setPfpUrl(String pfpUrl) {
+		this.pfpUrl = pfpUrl;
 	}
 
-	public File getBanner() {
-		return banner;
+	public String getBannerUrl() {
+		return bannerUrl;
 	}
 
-	public void setBanner(File banner) {
-		this.banner = banner;
+	public void setBanerUrl(String bannerUrl) {
+		this.bannerUrl = bannerUrl;
 	}
 
 	public void addPost(Post post) {

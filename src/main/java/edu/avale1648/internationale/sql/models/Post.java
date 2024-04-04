@@ -25,10 +25,10 @@ public class Post {
 	private String text;
 	private int rating;
 	@OneToMany(mappedBy = "post", cascade = CascadeType.ALL, orphanRemoval = true)
-	private List<File> files;
+	private List<String> fileUrls;
 	@OneToMany(mappedBy = "post", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Post> comments;
-	
+
 	public Post() {
 
 	}
@@ -40,7 +40,7 @@ public class Post {
 
 		this.text = text;
 		this.rating = 0;
-		this.files = new ArrayList<File>();
+		this.fileUrls = new ArrayList<String>();
 		this.comments = new ArrayList<Post>();
 	}
 
@@ -89,12 +89,11 @@ public class Post {
 		this.rating += value;
 	}
 
-	public void addFile(File file) {
-		file.setPost(this);
-		files.add(file);
+	public void addFileUrl(String fileUrl) {
+		fileUrls.add(fileUrl);
 	}
 
-	public void removeFile(File file) {
-		files.remove(file);
+	public void removeFile(String fileUrl) {
+		fileUrls.remove(fileUrl);
 	}
 }

@@ -23,8 +23,8 @@ public class User {
 	private LocalDateTime birthdate;
 	/* registration dateTime */
 	private LocalDateTime cakeDate;
-	private File profilePicture;
-	private File banner;
+	private String pfpUrl;
+	private String bannerUrl;
 	// Posts
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Post> posts;
@@ -92,20 +92,20 @@ public class User {
 		return cakeDate;
 	}
 
-	public File getProfilePicture() {
-		return profilePicture;
+	public String getPfpUrl() {
+		return pfpUrl;
 	}
 
-	public void setProfilePicture(File profilePicture) {
-		this.profilePicture = profilePicture;
+	public void setPfpUrl(String pfpUrl) {
+		this.pfpUrl = pfpUrl;
 	}
 
-	public File getBanner() {
-		return banner;
+	public String getBannerUrl() {
+		return bannerUrl;
 	}
 
-	public void setBanner(File banner) {
-		this.banner = banner;
+	public void setBannerUrl(String banner) {
+		this.bannerUrl = banner;
 	}
 
 	public void addPost(Post post) {
