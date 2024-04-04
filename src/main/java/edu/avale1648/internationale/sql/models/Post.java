@@ -33,10 +33,14 @@ public class Post {
 
 	}
 
-	public Post(LocalDateTime postDate, User user, Union union, String title, String text) {
-		this.postDate = postDate;
+	public Post(User user, Union union, String text) {
+		this.postDate = LocalDateTime.now();
 		this.user = user;
-		this.union = union;
+		user.addPost(this);
+		if (union != null) {
+			this.union = union;
+			union.addPost(this);
+		}
 
 		this.text = text;
 		this.rating = 0;

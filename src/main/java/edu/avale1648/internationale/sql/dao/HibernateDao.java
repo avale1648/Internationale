@@ -8,7 +8,7 @@ public interface HibernateDao<T> {
 	
 	public List<T> getAll();
 	
-	public T create(final T entity);
+	public T save(final T entity);
 	
 	public T update(final T entity);
 	

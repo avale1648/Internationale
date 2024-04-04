@@ -5,7 +5,7 @@ import java.util.UUID;
 
 import edu.avale1648.internationale.sql.dao.HibernateDao;
 
-public abstract class AbstractHibernateService <T> {
+public abstract class AbstractHibernateService <T>{
 	private HibernateDao<T> dao;
 	
 	public AbstractHibernateService( HibernateDao<T> dao) {
@@ -20,8 +20,8 @@ public abstract class AbstractHibernateService <T> {
 		return dao.getAll();
 	}
 	
-	public T create(T entity) {
-		return dao.create(entity);
+	public T save(T entity) {
+		return dao.save(entity);
 	}
 	
 	public T update (T entity) {

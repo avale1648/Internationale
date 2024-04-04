@@ -31,9 +31,8 @@ public class Union {
 
 	}
 
-	public Union(String name, String description, User founder, boolean isMature) {
+	public Union(String name, User founder, boolean isMature) {
 		this.name = name;
-		this.description = description;
 		this.founder = founder;
 		this.isMature = isMature;
 

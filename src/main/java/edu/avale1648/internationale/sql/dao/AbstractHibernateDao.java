@@ -23,7 +23,7 @@ public abstract class AbstractHibernateDao<T> implements HibernateDao<T>{
 	}
 
 	@Override
-	public T create(final T entity) {
+	public T save(final T entity) {
 		var session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
 		var transaction = session.beginTransaction();
 		session.persist(entity);
