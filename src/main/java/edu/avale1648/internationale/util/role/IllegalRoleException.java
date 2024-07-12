@@ -1,4 +1,4 @@
-package edu.avale1648.internationale.util;
+package edu.avale1648.internationale.util.role;
 
 public class IllegalRoleException extends RuntimeException {
 	private static final long serialVersionUID = 1L;
