@@ -53,14 +53,6 @@ public class Message {
 	}
 
 	@Override
-	public boolean equals(Object obj) {
-		Message other = (Message) obj;
-
-		return this.sender == other.sender && this.receiver == other.receiver && this.date == other.date
-				&& this.text == other.text && this.file == other.file;
-	}
-
-	@Override
 	public int hashCode() {
 		return Objects.hash(sender) + Objects.hash(receiver) + Objects.hash(date) + Objects.hash(text)
 				+ Objects.hash(file);

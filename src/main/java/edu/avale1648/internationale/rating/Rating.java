@@ -1,5 +1,9 @@
 package edu.avale1648.internationale.rating;
 
+import java.util.Objects;
+
+import org.json.JSONObject;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import edu.avale1648.internationale.post.Post;
@@ -44,6 +48,16 @@ public class Rating {
 	
 	public Rating(Rating other) {
 		this(other.user, other.post, other.value);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(user) + Objects.hash(post) + Objects.hash(value);
+	}
+	
+	@Override
+	public String toString() {
+		return new JSONObject(this).toString();
 	}
 	
 	public Long getId() {

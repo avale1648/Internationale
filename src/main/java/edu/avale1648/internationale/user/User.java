@@ -59,29 +59,7 @@ public class User {
 	}
 
 	public User(User other) {
-		this.name = other.name;
-		this.email = other.email;
-		this.password = other.password;
-		this.birthdate = other.birthdate;
-		this.rating = other.rating;
-		this.role = other.role;
-		this.cakedate = other.cakedate;
-		this.description = other.description;
-		this.pfp = other.pfp;
-		this.banner = other.banner;
-	}
-
-	// Long id, String name, String email, String password, Timestamp birthdate,
-	// Long rating, String role, Timestamp birthdate, String description,
-	// String pfp, String banner
-	@Override
-	public boolean equals(Object obj) {
-		User u = (User) obj;
-
-		return this.name == u.name && this.email == u.email && this.password == u.password
-				&& this.birthdate == u.birthdate && this.rating == u.rating && this.role == u.role
-				&& this.cakedate == u.cakedate && this.description == u.description && this.pfp == u.pfp
-				&& this.banner == u.banner;
+		this(other.name, other.email, other.password, other.birthdate, other.role, other.description, other.pfp, other.banner);
 	}
 
 	@Override

@@ -1,5 +1,9 @@
 package edu.avale1648.internationale.subscription.community;
 
+import java.util.Objects;
+
+import org.json.JSONObject;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import edu.avale1648.internationale.community.Community;
@@ -36,6 +40,16 @@ public class CommunitySubscription {
 
 	public CommunitySubscription(CommunitySubscription other) {
 		this(other.user, other.community);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(user) + Objects.hash(community);
+	}
+	
+	@Override
+	public String toString() {
+		return new JSONObject(this).toString();
 	}
 
 	public Long getId() {

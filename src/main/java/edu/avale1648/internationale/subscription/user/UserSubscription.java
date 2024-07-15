@@ -1,5 +1,9 @@
 package edu.avale1648.internationale.subscription.user;
 
+import java.util.Objects;
+
+import org.json.JSONObject;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import edu.avale1648.internationale.user.User;
@@ -35,6 +39,16 @@ public class UserSubscription {
 	
 	public UserSubscription(UserSubscription other) {
 		this(other.subscriber, other.author);
+	}
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(subscriber) + Objects.hash(author);
+	}
+	
+	@Override
+	public String toString() {
+		return new JSONObject(this).toString();
 	}
 	
 	public Long getId() {

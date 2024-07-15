@@ -60,14 +60,7 @@ public class Community {
 	}
 
 	public Community(Community other) {
-		this.founder = other.founder;
-		this.name = other.name;
-		this.mature = other.mature;
-		this.rating = other.rating;
-		this.cakedate = other.cakedate;
-		this.description = other.description;
-		this.pfp = other.pfp;
-		this.banner = other.banner;
+		this(other.founder, other.name, other.description, other.pfp, other.banner, other.mature);
 	}
 
 	@Override

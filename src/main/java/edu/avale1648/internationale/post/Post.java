@@ -60,15 +60,6 @@ public class Post {
 	public Post(Post other) {
 		this(other.user, other.community, other.parentPost, other.title, other.text, other.file);
 	}
-	
-	@Override
-	public boolean equals(Object obj) {
-		Post other = (Post) obj;
-
-		return this.user == other.user && this.community == other.community && this.parentPost == other.parentPost
-				&& this.rating == other.rating && this.postDate == other.postDate
-				&& this.title == other.title && this.text == other.text && this.file == other.file;
-	}
 
 	@Override
 	public int hashCode() {
