@@ -1,7 +1,24 @@
-#Forum-social network like Reddit/Форум-соцсеть на подобие Reddit
+![# L'Internationale](https://imgur.com/dsTfIQT)
 
-Technology Stack/Используемые технологии:
+Форум-соцсеть, аналог Reddit. Данный проект является дипломной работой @github/avale1648. Планируется реализовать следующий функционал:
 
-- PostgreSql as DBMS/ как СУБД;
-- Spring Framework (Java) as Backend/как серверная часть;
-- React (JS/TS) as Frontend/как клиентская часть.
+* система рейтинга
+* система веток (тредов)
+* поддержка мультимедиа
+* чат
+
+# Содержание
+
+* Технологии
+* Комманда проекта
+
+# Технологии
+
+* [PostgreSQL](https://www.postgresql.org) - СУБД
+* [Spring Framework](https://spring.io) - серверная часть
+* [React](https://ru.legacy.reactjs.org) - клиентская часть
+
+#Комманда проекта
+
+@github/avale1648 - разработчик, дизайнер
+@github/doublewera - дипломный руководитель
