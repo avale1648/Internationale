@@ -13,9 +13,11 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.Data;
 
 @Entity
 @Table(name = "users")
+@Data
 public class User {
 	@Id
 	@GeneratedValue
@@ -47,7 +49,7 @@ public class User {
 		this.password = password;
 		this.birthdate = birthdate;
 
-		if (Role.isValid(role)) {
+		if (!Role.isValid(role)) {
 			this.role = role;
 		} else {
 			throw new IllegalRoleException(String.format("Illegal role: %s", role));
@@ -75,6 +77,81 @@ public class User {
 	}
 
 	public Long getId() {
-		return this.id;
+		return id;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public void setName(String value) {
+		name = value;
+	}
+	
+	public String getEmail() {
+		return email;
+	}
+	
+	public void setEmail(String value) {
+		email = value;
+	}
+	
+	public String getPassword() {
+		return password;
+	}
+	
+	public void setPassword(String value) {
+		password = value;
+	}
+	
+	public Timestamp getBirthdate() {
+		return birthdate;
+	}
+	
+	public Long getRating() {
+		return rating;
+	}
+	
+	public void setRating(Long value) {
+		rating = value;
+	}
+	
+	public String getRole() {
+		return role;
+	}
+	
+	public void setRole(String value) {
+		if(!Role.isValid(value)) {
+			throw new IllegalRoleException(String.format("Illegal role: %s", value));
+		}
+		role = value;
+	}
+	
+	public Timestamp getCakedate() {
+		return cakedate;
+	}
+	
+	public String getDescription() {
+		return description;
+	}
+	
+	public void setDescription(String value) {
+		description = value;
+	}
+	
+	public String getPfp() {
+		return pfp;
+	}
+	
+	public void setPfp(String value) {
+		pfp = value;
+	}
+	
+	public String getBanner() {
+		return banner;
+	}
+	
+	public void setBanner(String value) {
+		banner = value;
 	}
 }
