@@ -66,4 +66,32 @@ public class Message {
 	public Long getId() {
 		return id;
 	}
+	
+	public User getSender() {
+		return sender;
+	}
+	
+	public User getReceiver() {
+		return receiver;
+	}
+	
+	public Timestamp getDate() {
+		return date;
+	}
+	
+	public String getText() {
+		return text;
+	}
+	
+	public void setText(String value) {
+		text = value;
+	}
+	
+	public String getFile() {
+		return file;
+	}
+	
+	public void setFile(String value) {
+		file = value;
+	}
 }
