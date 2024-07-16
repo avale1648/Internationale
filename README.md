@@ -20,6 +20,5 @@
 
 # Комманда проекта
 
-
-[doublewera](https://github.com/doublewera) - дипломный руководитель
-[avale1648](https://github.com/avale1648) - разработчик, дизайнер
+* [doublewera](https://github.com/doublewera) - дипломный руководитель
+* [avale1648](https://github.com/avale1648) - разработчик, дизайнер
