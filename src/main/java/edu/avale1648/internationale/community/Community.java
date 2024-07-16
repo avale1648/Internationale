@@ -86,4 +86,56 @@ public class Community {
 	public Long getId() {
 		return id;
 	}
+	
+	public User getFounder() {
+		return founder;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public void setName(String value) {
+		name = value;
+	}
+	
+	public boolean getMature() {
+		return mature;
+	}
+	
+	public Long getRating() {
+		return rating;
+	}
+	
+	public void setRating(Long value) {
+		rating = value;
+	}
+	
+	public Timestamp getCakedate() {
+		return cakedate;
+	}
+	
+	public String getDescription() {
+		return description;
+	}
+	
+	public void setDescription(String value) {
+		description = value;
+	}
+	
+	public String getPfp() {
+		return pfp;
+	}
+	
+	public void setPfp(String value) {
+		pfp = value;
+	}
+	
+	public String getBanner() {
+		return banner;
+	}
+	
+	public void setBanner(String value) {
+		description = banner;
+	}
 }
