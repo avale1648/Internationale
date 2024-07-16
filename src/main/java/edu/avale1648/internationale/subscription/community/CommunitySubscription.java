@@ -55,4 +55,12 @@ public class CommunitySubscription {
 	public Long getId() {
 		return this.id;
 	}
+	
+	public User getUser() {
+		return user;
+	}
+	
+	public Community getCommunity() {
+		return community;
+	}
 }
