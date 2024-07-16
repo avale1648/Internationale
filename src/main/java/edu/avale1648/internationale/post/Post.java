@@ -64,7 +64,7 @@ public class Post {
 	@Override
 	public int hashCode() {
 		return Objects.hash(user) + Objects.hash(community) + Objects.hash(parentPost) + Objects.hash(rating)
-				+ Objects.hash(postDate) + Objects.hash(title) + Objects.hash(text) + Objects.hash(file);
+				+ Objects.hash() + Objects.hash(title) + Objects.hash(text) + Objects.hash(file);
 	}
 	
 	@Override
@@ -72,7 +72,56 @@ public class Post {
 		return new JSONObject(this).toString();
 	}
 	
+	//Long id, User user, Community community, Post parent, String title, String text, Timestamp postdate, Long Rating, String file
 	public Long getId() {
 		return id;
+	}
+	
+	public User getUser() {
+		return user;
+	}
+	
+	public Community getCommunity() {
+		return community;
+	}
+	
+	public Post getParentPost() {
+		return parentPost;
+	}
+	
+	public String getTitle() {
+		return title;
+	}
+	
+	public void setTitle(String value) {
+		title = value;
+	}
+	
+	public String getText() {
+		return text;
+	}
+	
+	public void setText(String value) {
+		text = value;
+	}
+	
+	public Timestamp getPostDate() {
+		return postDate;
+	}
+	
+	public Long getRating() {
+		return rating;
+	}
+	
+	public void setRating(Long value) {
+		rating = value;
+	}
+	
+	public String getFile() {
+		return file;
+	}
+	
+	public void setFile(String value) {
+		file = value;
 	}
 }
