@@ -63,4 +63,16 @@ public class Rating {
 	public Long getId() {
 		return this.id;
 	}
+	
+	public User getUser() {
+		return user;
+	}
+	
+	public Post getPost() {
+		return post;
+	}
+	
+	public String getValue() {
+		return value;
+	}
 }
