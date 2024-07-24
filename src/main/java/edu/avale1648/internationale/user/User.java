@@ -47,11 +47,10 @@ public class User {
 		this.password = password;
 		this.birthdate = birthdate;
 
-		if (!Role.isValid(role)) {
-			this.role = role;
-		} else {
-			throw new IllegalRoleException(String.format("Illegal role: %s", role));
-		}
+		//if(Role.isValid(role) == false) {
+		//	throw new IllegalRoleException(String.format("Illegal role: %s", role));
+		//}
+		//this.role = role;
 
 		this.description = description;
 		this.pfp = pfp;
@@ -119,9 +118,6 @@ public class User {
 	}
 	
 	public void setRole(String value) {
-		if(!Role.isValid(value)) {
-			throw new IllegalRoleException(String.format("Illegal role: %s", value));
-		}
 		role = value;
 	}
 	

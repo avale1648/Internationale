@@ -30,6 +30,10 @@ public class Moderator {
 	@JoinColumn(name = "community_id", referencedColumnName = "id")
 	@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 	private Community community;
+	
+	public Moderator() {
+		
+	}
 
 	public Moderator(User user, Community community) {
 		this.user = user;

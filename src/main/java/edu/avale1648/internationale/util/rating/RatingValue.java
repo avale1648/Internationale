@@ -5,6 +5,11 @@ public final class RatingValue {
 	public static final String RATING_DOWN = "rating_down";
 	
 	public static final boolean isValid(String value) {
-		return value == RATING_UP || value == RATING_DOWN;
+		if(value == RATING_UP || value == RATING_DOWN) {
+			return true;
+		} else {
+			return false;
+		}
+		
 	}
 }

@@ -33,19 +33,21 @@ public class Rating {
 	@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 	private Post post;
 	private String value;
-	
-	public Rating() {}
-	
+
+	public Rating() {
+	}
+
 	public Rating(User user, Post post, String value) {
 		this.user = user;
 		this.post = post;
-		if(RatingValue.isValid(value)) {
-			this.value = value;
-		} else {
-			throw new IllegalRatingValueException(String.format("Illegal rating value: %s", value));
-		}
+
+		// if(!RatingValue.isValid(value)) {
+		// throw new IllegalRatingValueException(String.format("Illegal rating value:
+		// %s", value));
+		// }
+		this.value = value;
 	}
-	
+
 	public Rating(Rating other) {
 		this(other.user, other.post, other.value);
 	}
@@ -54,24 +56,24 @@ public class Rating {
 	public int hashCode() {
 		return Objects.hash(user) + Objects.hash(post) + Objects.hash(value);
 	}
-	
+
 	@Override
 	public String toString() {
 		return new JSONObject(this).toString();
 	}
-	
+
 	public Long getId() {
 		return this.id;
 	}
-	
+
 	public User getUser() {
 		return user;
 	}
-	
+
 	public Post getPost() {
 		return post;
 	}
-	
+
 	public String getValue() {
 		return value;
 	}
