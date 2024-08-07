@@ -1,4 +1,4 @@
-package edu.avale1648.internationale.util.role;
+package edu.avale1648.internationale.util;
 
 public final class Role {
 	// ordinary user

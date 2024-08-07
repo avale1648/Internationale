@@ -6,8 +6,8 @@ import java.util.Objects;
 
 import org.json.JSONObject;
 
-import edu.avale1648.internationale.util.role.IllegalRoleException;
-import edu.avale1648.internationale.util.role.Role;
+import edu.avale1648.internationale.util.IllegalRoleException;
+import edu.avale1648.internationale.util.Role;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

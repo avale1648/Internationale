@@ -8,8 +8,8 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import edu.avale1648.internationale.post.Post;
 import edu.avale1648.internationale.user.User;
-import edu.avale1648.internationale.util.rating.IllegalRatingValueException;
-import edu.avale1648.internationale.util.rating.RatingValue;
+import edu.avale1648.internationale.util.IllegalRatingValueException;
+import edu.avale1648.internationale.util.RatingValue;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;

@@ -1,4 +1,4 @@
-package edu.avale1648.internationale.util.rating;
+package edu.avale1648.internationale.util;
 
 public class IllegalRatingValueException extends RuntimeException {
 	private static final long serialVersionUID = 1L;

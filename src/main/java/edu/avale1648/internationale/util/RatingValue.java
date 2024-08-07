@@ -1,4 +1,4 @@
-package edu.avale1648.internationale.util.rating;
+package edu.avale1648.internationale.util;
 
 public final class RatingValue {
 	public static final String RATING_UP = "rating_up";
