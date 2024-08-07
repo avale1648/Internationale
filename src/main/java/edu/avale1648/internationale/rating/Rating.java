@@ -8,8 +8,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import edu.avale1648.internationale.post.Post;
 import edu.avale1648.internationale.user.User;
-import edu.avale1648.internationale.util.IllegalRatingValueException;
-import edu.avale1648.internationale.util.RatingValue;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -40,11 +38,6 @@ public class Rating {
 	public Rating(User user, Post post, String value) {
 		this.user = user;
 		this.post = post;
-
-		// if(!RatingValue.isValid(value)) {
-		// throw new IllegalRatingValueException(String.format("Illegal rating value:
-		// %s", value));
-		// }
 		this.value = value;
 	}
 

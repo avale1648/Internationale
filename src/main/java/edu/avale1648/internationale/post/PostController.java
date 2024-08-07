@@ -43,7 +43,10 @@ public class PostController {
 	@PutMapping("/{id}")
 	public ResponseEntity<Post> update(@PathVariable Long id, @RequestBody Post post) {
 		Post current = repository.findById(id).orElseThrow(RuntimeException::new);
-		current = repository.save(new Post(post));
+		
+		current.setTitle(post.getTitle());
+		current.setText(post.getText());
+		current.setRating(post.getRating());
 		
 		return ResponseEntity.ok(current);
 	}

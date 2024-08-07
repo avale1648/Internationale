@@ -120,8 +120,4 @@ public class Post {
 	public String getFile() {
 		return file;
 	}
-	
-	public void setFile(String value) {
-		file = value;
-	}
 }

@@ -6,7 +6,6 @@ import java.util.Objects;
 
 import org.json.JSONObject;
 
-import edu.avale1648.internationale.util.IllegalRoleException;
 import edu.avale1648.internationale.util.Role;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -46,12 +45,6 @@ public class User {
 		this.email = email;
 		this.password = password;
 		this.birthdate = birthdate;
-
-		//if(Role.isValid(role) == false) {
-		//	throw new IllegalRoleException(String.format("Illegal role: %s", role));
-		//}
-		//this.role = role;
-
 		this.description = description;
 		this.pfp = pfp;
 		this.banner = banner;

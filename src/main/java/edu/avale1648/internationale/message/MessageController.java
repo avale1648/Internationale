@@ -43,7 +43,8 @@ public class MessageController {
 	@PutMapping("/{id}")
 	public ResponseEntity<Message> update(@PathVariable Long id, @RequestBody Message message) {
 		Message current = repository.findById(id).orElseThrow(RuntimeException::new);
-		current = repository.save(new Message(message));
+
+		current.setText(message.getText());
 		
 		return ResponseEntity.ok(current);
 	}

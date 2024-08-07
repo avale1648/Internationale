@@ -42,10 +42,18 @@ public class UserController {
 
 	@PutMapping("/{id}")
 	public ResponseEntity<User> update(@PathVariable Long id, @RequestBody User user) {
-		User currentUser = repository.findById(id).orElseThrow(RuntimeException::new);
-		currentUser = repository.save(new User(user));
+		User current = repository.findById(id).orElseThrow(RuntimeException::new);
+		
+		current.setName(user.getName());
+		current.setEmail(user.getEmail());
+		current.setPassword(user.getPassword());
+		current.setRating(user.getRating());
+		current.setRole(user.getRole());
+		current.setDescription(user.getDescription());
+		current.setPfp(user.getPfp());
+		current.setBanner(user.getBanner());
 
-		return ResponseEntity.ok(currentUser);
+		return ResponseEntity.ok(current);
 	}
 
 	@DeleteMapping("/{id}")

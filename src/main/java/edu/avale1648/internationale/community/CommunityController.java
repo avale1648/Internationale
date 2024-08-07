@@ -41,9 +41,16 @@ public class CommunityController {
 	}
 
 	@PutMapping("/{id}")
-	public ResponseEntity<Community> update(@RequestBody Community community, @PathVariable Long id) {
-		var current = repository.findById(id).orElseThrow(RuntimeException::new);
-		current = repository.save(new Community(current));
+	public ResponseEntity<Community> update( @PathVariable Long id, @RequestBody Community community) {
+		Community current = repository.findById(id).orElseThrow(RuntimeException::new);
+		
+		current.setName(community.getName());
+		current.setDescription(community.getDescription());
+		current.setPfp(community.getPfp());
+		current.setBanner(community.getBanner());
+		current.setRating(community.getRating());
+		
+		current = repository.save(current);
 
 		return ResponseEntity.ok(current);
 	}

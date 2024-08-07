@@ -90,8 +90,4 @@ public class Message {
 	public String getFile() {
 		return file;
 	}
-	
-	public void setFile(String value) {
-		file = value;
-	}
 }
