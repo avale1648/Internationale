@@ -1,5 +1,5 @@
 import React from "react";
-import ApiUrls from "../ApiUrls";
+import ApiUrls from "../util/ApiUrls";
 import styled from "styled-components";
 
 interface UserProps {

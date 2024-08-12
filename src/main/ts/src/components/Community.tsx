@@ -1,5 +1,5 @@
 import React from "react";
-import ApiUrls from "../ApiUrls";
+import ApiUrls from "../util/ApiUrls";
 import styled from "styled-components";
 
 interface CommunityProps {
@@ -33,7 +33,7 @@ const Community = () => {
             )}
             {communityData && communityData.map(community => 
                 <div key={community.id}>
-                    Name: {community.name}, Mature: {community.mature}, Rating: {community.rating}
+                    Name: {community.name}, Mature: {community.mature? 'true': 'false'}, Rating: {community.rating}
                 </div>
             )}
         </UserWrapper>
