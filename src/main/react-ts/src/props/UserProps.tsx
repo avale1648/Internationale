@@ -1,5 +1,4 @@
-interface UserProps {
-   
+export interface UserProps {
     id: number;
     name: string;
     email: string;
@@ -12,5 +11,3 @@ interface UserProps {
     pfp: string;
     banner: string;
 }
-
-export default UserProps;
