@@ -1,4 +1,4 @@
-.user {
+.community {
     width:50%;
     border: 1px solid lightgray;
     border-radius: 10px;
@@ -10,55 +10,55 @@
     margin:10px 0px;
 }
 
-.user:hover {
+.community:hover {
     border:1px solid gray;
 }
 
-.user-banner {
+.community-banner {
     height:150px;
     border-radius:5px 5px 0px 0px;
 }
 
-.user-header {
+.community-header {
     display:flex;
-    justify-content: space-between;
-    width:20%;
+    justify-content: justify;
+    width:auto;
     align-items: center;
     margin:10px;
 }
 
-.user-header img {
+.community-header img {
     width:50px;
     height:50px;
     border-radius:30px;
-    margin-right:20px;
+    margin-right: 20px;
 }
 
-.user-info {
+.community-info {
     display:flex;
     width:33%;
     justify-content: justify;
     margin:0px 10px 10px 10px;
 }
 
-.user-info-sub {
+.community-info-sub {
     border-right:1px solid lightgray;
     padding:5px;
     text-align: right;
 }
 
-.user-info-sub img {
+.community-info-sub img {
     width:25px;
     height:25px;
     margin-right:5px;
 }
 
-.user-info-sub:hover {
+.community-info-sub:hover {
     text-decoration: underline;
     border-right:1px solid gray;
 }
 
-.user-info-sub:hover::after {
+.community-info-sub:hover::after {
     content: attr(data-title); /* Выводим текст */
     position: absolute; /* Абсолютное позиционирование */
     left: 20%; top: 30%; /* Положение подсказки */
@@ -69,6 +69,6 @@
     border:1px solid lightgray;
 }
 
-.user-description {
+.community-description {
     margin:0px 10px 10px 10px;
 }

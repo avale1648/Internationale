@@ -1,5 +1,5 @@
 import UserProps from '../../props/UserProps';
-import './user.css';
+import './styles.css';
 import DEFAULT_BANNER from '../../assets/default_banner.png';
 import DEFAULT_PFP from '../../assets/default-user-pfp.png';
 import RATING from '../../assets/rating.svg';
@@ -28,6 +28,23 @@ export function User({ userProps }: { userProps: UserProps }) {
                     {cakedate_format}
                 </div>
                 <div className='user-description'>{userProps.description}</div>
+            </div>
+        </div>
+    );
+}
+
+export function UserPreview({ userProps }: { userProps: UserProps }) {
+    const pfp = userProps.pfp === "" ? DEFAULT_PFP : userProps.pfp;
+
+    return (
+        <div className='user'>
+            <div className='user-info-sub'>
+                <img src={pfp} alt='pfp'/>
+                {userProps.name}
+            </div>
+            <div className='user-info-sub'>
+                <img src={RATING} alt='rating' />
+                {userProps.rating}
             </div>
         </div>
     );
