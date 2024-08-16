@@ -12,7 +12,7 @@ function App() {
   return (
     <div>
       { users.map( (user: UserProps) => 
-        <div key = {user.id}>
+        <div key = {user.name}>
           <User userProps={user}></User>
         </div>
       )
