@@ -1,13 +1,12 @@
 import UserProps from "./UserProps";
 
 interface CommunityProps {
-    
     id: number;
     founder: UserProps;
     name: string;
     mature: boolean;
     rating: number;
-    cakedate: Date;
+    cakedate: string;
     description: string;
     pfp: string;
     banner: string;

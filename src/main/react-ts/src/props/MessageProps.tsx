@@ -4,7 +4,7 @@ interface MessageProps {
     id: number;
     sender: UserProps;
     receiver: UserProps;
-    date: Date;
+    date: string;
     text: string;
     file: string;
 }

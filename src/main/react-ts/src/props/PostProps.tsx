@@ -8,7 +8,7 @@ interface PostProps {
     parentPost: PostProps;
     title: string;
     text: string;
-    postDate: Date;
+    postDate: string;
     rating: number;
     file: string;
 }

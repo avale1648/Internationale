@@ -1,13 +1,15 @@
-export interface UserProps {
+interface UserProps {
     id: number;
     name: string;
     email: string;
     password: string;
-    birthdate: Date;
+    birthdate: string;
     rating: number;
     role: string;
-    cakedate: Date;
+    cakedate: string;
     description: string;
     pfp: string;
     banner: string;
 }
+
+export default UserProps;
