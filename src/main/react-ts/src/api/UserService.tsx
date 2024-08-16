@@ -1,13 +1,14 @@
 import axios from "axios";
-import { UserProps } from "../props/UserProps";
+import UserProps from "../props/UserProps";
 import { API_USERS } from "../util/ApiUrls";
 
-export async function createUser(user: UserProps) {
+export async function createUser(user: UserProps): Promise<UserProps> {
     try {
         const response = await axios.post(API_USERS, user);
         return response.data;
     } catch(error) {
         console.log(error);
+        throw(error);
     }
 }
 
@@ -21,12 +22,13 @@ export async function getUsers(): Promise<UserProps[]> {
     } 
 }
 
-export async function getUserById(id: number) {
+export async function getUserById(id: number): Promise<UserProps> {
     try {
         const responce = await axios.get(`${API_USERS}/${id}`);
         return responce.data;
     } catch(error) {
         console.log(error);
+        throw(error);
     }
 }
 
