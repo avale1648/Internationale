@@ -1,7 +1,7 @@
 import './App.css';
 import { getUsers } from './api/UserService';
-import {UserProps} from './props/UserProps';
-import { User } from './components/user/User';
+import UserProps from './props/UserProps';
+import {User} from './components/user/User';
 import React from 'react';
 
 const users: UserProps[] = await getUsers();
