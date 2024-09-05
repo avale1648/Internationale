@@ -5,6 +5,7 @@ import java.net.URISyntaxException;
 import java.util.List;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -28,7 +29,8 @@ public class PostController {
 		return repository.findAll();
 	}
 	
-	@GetMapping("/{id}") 
+	@GetMapping("/{id}")
+	@CrossOrigin("http://localhost:3000")
 	public Post getById(@PathVariable Long id){
 		return repository.findById(id).orElseThrow(RuntimeException::new);
 	}
