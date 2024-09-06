@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/posts")
+@CrossOrigin("http://localhost:3000")
 public class PostController {
 	private final PostRepository repository;
 	

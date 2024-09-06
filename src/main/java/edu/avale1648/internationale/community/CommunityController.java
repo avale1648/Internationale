@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/communities")
+@CrossOrigin("http://localhost:3000")
 public class CommunityController {
 	private final CommunityRepository repository;
 
@@ -30,7 +31,6 @@ public class CommunityController {
 	}
 
 	@GetMapping("/{id}")
-	@CrossOrigin("http://localhost:3000")
 	public Community getById(@PathVariable Long id) {
 		return repository.findById(id).orElseThrow(RuntimeException::new);
 	}
