@@ -48,6 +48,8 @@ public class MessageController {
 
 		current.setText(message.getText());
 		
+		repository.save(current);
+		
 		return ResponseEntity.ok(current);
 	}
 	

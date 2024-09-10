@@ -54,6 +54,8 @@ public class UserController {
 		current.setDescription(user.getDescription());
 		current.setPfp(user.getPfp());
 		current.setBanner(user.getBanner());
+		
+		repository.save(current);
 
 		return ResponseEntity.ok(current);
 	}

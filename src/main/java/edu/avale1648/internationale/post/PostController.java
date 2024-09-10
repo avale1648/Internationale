@@ -33,7 +33,7 @@ public class PostController {
 	@GetMapping("/{id}")
 	@CrossOrigin("http://localhost:3000")
 	public Post getById(@PathVariable Long id){
-		return repository.findById(id).orElseThrow(RuntimeException::new);
+		return repository.findById(id).get();
 	}
 	
 	@PostMapping
@@ -50,6 +50,8 @@ public class PostController {
 		current.setTitle(post.getTitle());
 		current.setText(post.getText());
 		current.setRating(post.getRating());
+		
+		repository.save(current);
 		
 		return ResponseEntity.ok(current);
 	}
