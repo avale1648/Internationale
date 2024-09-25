@@ -136,6 +136,6 @@ public class Community {
 	}
 	
 	public void setBanner(String value) {
-		description = banner;
+		banner = value;
 	}
 }
